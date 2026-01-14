@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Ad Blocker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" rx="6" fill="#FF0000" />
+                    <path d="M10 15.5L15.5 12L10 8.5V15.5Z" fill="white" />
+                    <line x1="5" y1="5" x2="19" y2="19" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <h1>Stealth Mode 2026</h1>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="toggle-section">
+                <span class="toggle-label">Protection</span>
+                <label class="switch">
+                    <input type="checkbox" id="enableToggle" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="status" id="status">
+                <div class="status-icon active" id="statusIcon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" />
+                        <path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <span id="statusText">Protection Active</span>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="adsBlocked">0</div>
+                    <div class="stat-label">Ads Blocked</div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="btn btn-secondary" id="resetStats">Reset Stats</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>v2.0 - Advanced Protection 🛡️</p>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
