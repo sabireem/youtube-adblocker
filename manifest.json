@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "YouTube AdBlocker 2026 (Stealth Mode)",
-  "version": "3.0.0",
-  "description": "Undetectable ad acceleration and skipping engine.",
+  "name": "YouTube AdBlocker 2026 (Universal Stealth)",
+  "version": "4.0.0",
+  "description": "Undetectable ad acceleration and skipping engine for all websites.",
   "permissions": [
     "storage",
     "scripting"
   ],
   "host_permissions": [
-    "*://*.youtube.com/*"
+    "<all_urls>"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -29,12 +29,13 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.youtube.com/*"
+        "<all_urls>"
       ],
       "js": [
         "content.js"
       ],
-      "run_at": "document_end"
+      "run_at": "document_end",
+      "all_frames": true
     }
   ]
 }
